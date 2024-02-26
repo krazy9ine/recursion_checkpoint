@@ -1,0 +1,28 @@
+ALGORITHM IsPalindrome
+
+VAR
+    start, end, length : Integer
+    isPalindrome : Boolean
+
+BEGIN
+    length := length(word)          
+    start := 0                      
+    end := length - 1               
+    isPalindrome := True              
+
+   
+    WHILE start < end DO
+        IF word[start] != word[end] THEN
+            isPalindrome := False                   
+        END IF
+
+        start := start + 1
+        end := end - 1
+    END WHILE
+
+    IF isPalindrome THEN
+        WRITE(The word is a palindrome)
+    ELSE
+        WRITE(The word is not a palindrome)
+    END IF
+END ALGORITHM
